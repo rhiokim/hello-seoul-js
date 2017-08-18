@@ -17,8 +17,8 @@ jobs:
       - run:
           name: generate static site
           command: npm run docs
-      - run: git config --global user.email "circleci.bot@gmail.com"
-      - run: git config --global user.name "Circle CI Bot"
+      - run: git config --global user.email "rhio.kim+flybook@gmail.com"
+      - run: git config --global user.name "Flybook"
       - run:
           name: deploy docs
           command: npm run deploy
