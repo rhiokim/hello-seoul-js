@@ -2,5 +2,13 @@
   "name": "hello-seoul-js",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "docs": "flybook docs --outdir=out",
+    "deploy": "gh-pages -d out"
+  },
+  "devDependencies": {
+    "flybook": "^1.4.5",
+    "gh-pages": "^1.0.0"
+  }
 }
