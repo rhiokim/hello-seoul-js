@@ -5,8 +5,8 @@ jobs:
       - image: circleci/node:8
     working_directory: ~/hello-seoul-js
     branches:
-      only:
-        - master
+      ignore:
+        - gh-pages
     steps:
       - checkout
       - restore_cache:
