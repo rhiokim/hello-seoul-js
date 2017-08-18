@@ -26,11 +26,20 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
+  test:
+    steps:
+      - checkout
+      - run:
+          name: lint
+          command: npm test
 workflows:
   version: 2
-  build:
+  build_and_test:
     jobs:
-      - build:
+      - build
+      - test:
+          requires:
+            - build
           filters:
             branches:
-              only: master
+              only: feature/ci
